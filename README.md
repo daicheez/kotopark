@@ -7,7 +7,7 @@
 | name               | string  | null: false |
 | email              | string  | null: false |
 | encrypted_password | string  | null: false |
-| age                | integer | null: false |
+| age_id             | integer | null: false |
 | gender_id          | integer | null: false |
 | place_id           | integer | null: false |
 | hobby              | string  |             |
