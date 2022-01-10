@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Kotopark</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ことパーク</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
   </head>
 
   <body>
+     <header class="header">
+      <div class="inner">
+        <div class="nav">
+          <div class="nav__left">
+            <%= link_to image_tag("logo.png", class: :logo_head), root_path %>
+          </div>
+          <div class="nav__center">
+            <%= link_to "訓練する", root_path, class: :nav__btn %>
+          </div>
+        </div>
+      </div>
+    </header>
+    </div>
     <%= yield %>
   </body>
 </html>
