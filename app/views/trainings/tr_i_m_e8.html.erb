@@ -1,13 +1,18 @@
-<h1 class="question">
-  <%= img src="/images/bag.png" %>はどれですか？</h1>
-
-<div class="level">
-  <div class="choice">かばん</div>
-  <div class="choice">地球</div>
-  <div class="choice">ボンド</div>
-  <div class="choice">ペンギン</div>
+<div class="question">
+  <h2>当てはまるものを一つ選びましょう</h2>
+  <%= img src="/images/bag.png" %><h1>はどれですか？</h1>
 </div>
 
+<form method="post" action="" class="level">
+  <input type="radio" name="choice" value="かばん">かばん
+  <input type="radio" name="choice" value="地球">地球
+  <input type="radio" name="choice" value="ボンド">ボンド
+  <input type="radio" name="choice" value="ペンギン">ペンギン
+</div>
+
+<p><input type="submit" value="回答する"></p>
+
+</form>
 <div class="break">
-  <%= link_to "止める", '#', class: :back__btn %>
+  <%= link_to "止める", trainings_index_path, class: :back__btn %>
 </div>
