@@ -13,47 +13,40 @@
 | hobby              | string  |             |
 | job                | string  |             |
 | profile            | text    |             |
+| experience         | integer | null: false, default: 0 |
 
 ### Association
 
-- has_one :easy_training
-- has_one :medium_training
-- has_one :hard_training
+- has_many :trainings
 - has_many :comments
-- has_many :users, through: :friends
+- has_many :follow_friends, foreign_key: "follower_id", class_name: "Friend", dependent: :destroy
+- has_many :follows, through: :follow_friends
+- has_many :follower_friends, foreign_key: "follow_id", class_name: "Friend", dependent: :destroy
+- has_many :followers, through: :follower_friends
 
-## easy_trainings テーブル
+## trainings テーブル
 
-| Column        | Type       | Options                       |
-| ------------- | ---------- | ----------------------------- |
-| easy_progress | integer    |                               |
-| user          | references | null:false, foreign_key: true |
-
-### Association
-
-- has_one :user
-
-## medium_trainings テーブル
-
-| Column          | Type       | Options                       |
-| --------------- | ---------- | ----------------------------- |
-| medium_progress | integer    |                               |
-| user            | references | null:false, foreign_key: true |
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| user   | references | null: false, foreign_key: true |
+| score  | integer    | null: false                    |
 
 ### Association
 
-- has_one :user
+- belongs_to :user
+- has_many :choices
 
-## hard_trainings テーブル
+## choices テーブル
 
-| Column        | Type       | Options                       |
-| ------------- | ---------- | ----------------------------- |
-| hard_progress | integer    |                               |
-| user          | references | null:false, foreign_key: true |
+| Column    | Type       | Options                        |
+| --------- | ---------- | ------------------------------ |
+| trainings | references | null: false, foreign_key: true |
+| question  | text       | null: false                    |
+| answer    | boolean    |                                |
 
 ### Association
 
-- has_one :user
+- belongs_to :training
 
 ## comments テーブル
 
@@ -65,3 +58,15 @@
 ### Association
 
 - belongs_to :user
+
+## friends テーブル
+
+| Column   | Type       | Options                        |
+| -------- | ---------- | ------------------------------ |
+| follow   | integer    |                                |
+| follower | integer    |                                |
+
+### Association
+
+- belongs_to :follow, class_name: "User"
+- belongs_to :follower, class_name: "User"
