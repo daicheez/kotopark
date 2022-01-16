@@ -76,13 +76,21 @@
     <%= f.text_area :job, placeholder: "例）元事務員" %>
   </div>
 
-    <div class="field">
+  <div class="field">
     <div class='form-text-wrap'>
       <label class="form-text">ひとこと</label>
       <span class="indispensable">任意</span>
     </div>
     <%= f.text_area :profile, placeholder: "例）買い物行けるようになりたいです！",maxlength:"200" %>
   </div>
+
+    <div class="field">
+      <div class='form-text-wrap'>
+      <label class="form-text">イメージ画像</label>
+      <span class="indispensable">任意</span>
+      </div>
+      <%= f.file_field :image, class: 'hidden' %>
+    </div>
 
   <div class="actions">
     <%= f.submit "新規登録" %>
