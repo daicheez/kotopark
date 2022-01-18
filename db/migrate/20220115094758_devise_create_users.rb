@@ -13,7 +13,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string :hobby
       t.string :job
       t.text :profile
-      t.integer :experience,        null: false, default: 0
+      t.integer :experience_point,  null: false, default: 0
 
       ## Recoverable
       t.string   :reset_password_token

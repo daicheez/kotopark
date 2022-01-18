@@ -29,7 +29,7 @@
 | hobby              | string  |             |
 | job                | string  |             |
 | profile            | text    |             |
-| experience         | integer | null: false, default: 0 |
+| experience_point   | integer | null: false, default: 0 |
 
 ### Association
 
@@ -58,7 +58,7 @@
 | --------- | ---------- | ------------------------------ |
 | trainings | references | null: false, foreign_key: true |
 | question  | text       | null: false                    |
-| answer    | boolean    |                                |
+| answer    | boolean    | null: false                    |
 
 ### Association
 

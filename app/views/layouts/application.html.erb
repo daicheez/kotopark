@@ -11,29 +11,6 @@
   </head>
 
   <body>
-    <header class="header">
-      <div class="inner">
-        <div class="nav">
-          <div class="nav__left">
-            <%= link_to image_tag("logo.png", class: :logo_head), root_path %>
-          </div>
-          <div class="nav__center">
-            <%= link_to "訓練する", trainings_index_path, class: :nav__btn %>
-          </div>
-          <ul class='nav__right'>
-            <% if user_signed_in? %>
-              <li><%= link_to current_user.name, "#", class: "user-name" %></li>
-              <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
-            <% else %>
-              <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-              <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-            <% end %>
-          </ul>
-        </div>
-        </div>
-      </div>
-    </header>
-    </div>
     <%= yield %>
   </body>
 </html>

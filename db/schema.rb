@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 2022_01_15_094758) do
     t.string "hobby"
     t.string "job"
     t.text "profile"
-    t.integer "experience", default: 0, null: false
+    t.integer "experience_point", default: 0, null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
