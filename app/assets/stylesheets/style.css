@@ -138,7 +138,7 @@ ul {
   height: 30vh;
 }
 
-/* フッター */
+/* メインフッター */
 .footer{
   width: 100%;
   background-color: #5a3e0a;
@@ -150,6 +150,7 @@ ul {
   margin: auto;
 }
 
+/* マイページフッター */
 .mypg-footer{
   width: 100vw;
   bottom: 0px;
