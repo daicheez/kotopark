@@ -60,6 +60,35 @@ ul {
   padding: 0;
 }
 
+/* トレーニングページ */
+.training-page{
+  margin: auto;
+  text-align: center;
+}
+
+.category{
+  display: flex;
+  margin: 200px;
+  justify-content: space-between;
+}
+
+.ctg__btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: blue;
+  text-decoration: none;
+  user-select: none;
+  border: 1px lightblue solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+}
+
+.image-question img{
+  height: 300px;
+  width: 300px;
+}
+
 /* メイン */
 #index{
   background-image: url(plant.png);
