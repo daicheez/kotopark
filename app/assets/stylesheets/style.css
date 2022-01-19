@@ -2,8 +2,8 @@
 
 .header {
   background-color: #ffffff;
-  margin-bottom: 50px;
-  padding: 20px 0;
+  margin-bottom: 0px;
+  padding: 10px 0;
 }
 .inner {
   width: 1024px;
@@ -14,7 +14,15 @@
   display: flex;
   justify-content: space-between;
 }
-
+.nav__left{
+  margin: auto;
+}
+.nav__center{
+  margin: auto;
+}
+.nav__right{
+  margin: auto;
+}
 .nav__btn{
   display: inline-block;
   padding: 0.4em 1.6em;
@@ -47,6 +55,10 @@
   width: 150px;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+}
 
 /* メイン */
 #index{
@@ -69,41 +81,89 @@
 
 
 /* ユーザーページ */
-.user__wrapper{
-  min-height: calc(100vh - 161px);
+.my-room{
+  min-height: 100vh;
+
 }
-.table{
-  border-collapse: collapse;
-  margin-bottom: 32px;
-  width: 50%;
-}
-.table__col1{
-  text-align: left;
-  font-weight: bold;
-  background: #fafafa;
-  border-collapse: collapse;
-  border: 1px solid #f5f5f5;
-  width: 30%;
-  padding: 8px;
-}
-.table__col2{
-  text-align: left;
-  border: 1px solid #f5f5f5;
-  border-collapse: collapse;
-  width: 70%;
-  padding: 16px 8px;
-}
-.user__card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+.user-room-name-box{
+  text-align: center;
 }
 
+.user-room-name{
+  background-color: aquamarine;
+}
+
+.user-show{
+  min-height: calc(100vh - 93px);
+  min-width: 100vw;
+  background-image: url(/assets/back_ground_sky);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.user-box{
+  display: flex;
+}
+
+.user-table{
+  display: flex;
+  height: 50vh;
+}
+
+.avatar{
+  margin: 20px;
+}
+
+.user-detail-right{
+  margin-top: 20px;
+}
+.detail-user{
+  margin-left: 20px;
+}
+
+.user-edit{
+  margin: 0, 0, 0, auto;
+}
+
+.user-growth-content{
+  margin: auto;
+  margin-bottom: 0px;
+}
+
+.growth-image{
+  width: 30vw;
+  height: 30vh;
+}
+
+/* フッター */
+.footer{
+  width: 100%;
+  background-color: #5a3e0a;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0px;
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+}
+
+.mypg-footer{
+  width: 100vw;
+  bottom: 0px;
+  padding-bottom: 0px;
+  position: absolute;
+}
+
+.grass img{
+  width: 100%;
+}
 
 /* タブレット対応 */
 @media (max-width: 1024px) {
-  .inner {
+  /* .inner {
     width: 90%;
     margin: 0 auto;
   }
@@ -116,12 +176,12 @@
   }
   .prototype_image{
     width: 60%;
-  }
+  } */
 }
 
  /* スマホ表示 */
 @media (max-width: 599px) {
-  .logo {
+  /* .logo {
     width: 120px;
   }
   .page-heading {
@@ -142,5 +202,5 @@
   }
   .table{
     width: 100%;
-  }
+  } */
 }
