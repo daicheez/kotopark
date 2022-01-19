@@ -83,18 +83,18 @@
     </div>
     <%= f.text_area :profile, placeholder: "例）買い物行けるようになりたいです！",maxlength:"200" %>
   </div>
-
-    <div class="field">
-      <div class='form-text-wrap'>
-      <label class="form-text">イメージ画像</label>
-      <span class="indispensable">任意</span>
-      </div>
-      <%= f.file_field :avatar, class: 'hidden' %>
+  <br>
+  <div class="field">
+    <div class='form-text-wrap'>
+    <label class="form-text">イメージ画像</label>
+    <span class="indispensable">任意</span>
     </div>
-
+    <%= f.file_field :avatar, class: 'hidden' %>
+  </div>
+<br>
   <div class="actions">
     <%= f.submit "新規登録" %>
   </div>
 <% end %>
-
+<br>
 <%= render "users/shared/links" %>
