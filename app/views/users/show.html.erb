@@ -1,0 +1,57 @@
+<div class="my-room">
+  <%= render "shared/header" %>
+  
+  <div class="user-room-name-box">
+    <div class="user-room-name">
+      <%= @user.name %>さんのマイページ
+    </div>
+  </div>
+  
+  <%# ユーザーの情報 %>
+  <div class="user-show">
+    <div class="user-box">
+      <div class="user-table">
+        <%# アバター表示 %>
+        <div class="avatar">
+          <% if @user.avatar.attached? %>
+            <%= image_tag @user.avatar %>
+          <% else %>
+            <img src="/assets/profile_icon.png", height="100", width="100">
+          <% end %>
+        </div>
+        <div class="user-detail-right">
+          <div class="detail-user">名前：<%= "#{@user.name}" %></div>
+          <div class="detail-user">年齢：<%= "#{Age.find(@user.age_id).name}" %></div>
+          <div class="detail-user">性別：<%= "#{Gender.find(@user.gender_id).name}" %></div>
+          <div class="detail-user">居住地：<%= "#{Place.find(@user.place_id).name}" %></div>
+          <div class="detail-user">趣味：<%= "#{@user.hobby}" %></div>
+          <div class="detail-user">職業：<%= "#{@user.job}" %></div>
+          <div class="detail-user">一言：<%= "#{@user.profile}" %></div>
+  
+          <div class="user-edit">
+            <% if user_signed_in? && current_user.id == @user.id %>
+              <%= link_to "プロフィールを編集する", '#', method: :get, class: "user-edit-btn" ,width:"20",height:"20"%>
+              <%# <p class="or-text">or</p> %>
+              <%#= link_to "退会する", user_path(@user), method: :delete, class:"user-destroy-btn" ,width:"20",height:"20"%>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+    <%# ユーザーの進捗状況の表示 %>
+    <div class="user-growth-content">
+      <% if @user.experience_point >= 5 %>
+        <img src="/assets/growth_plant_2.png" alt="" class="growth-image">
+      <% elsif @user.experience_point >= 11 %>
+        <img src="/assets/growth_plant_3.png" alt="" class="growth-image">
+      <% elsif @user.experience_point >= 30 %>
+        <img src="/assets/growth_plant_4.png" alt="" class="growth-image">
+      <% else %>
+        <img src="/assets/growth_plant_1.png" alt="" class="growth-image">
+      <% end %>
+    </div>
+  <%= render "shared/mypg_footer" %>
+  </div>
+</div>

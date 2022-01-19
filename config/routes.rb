@@ -4,19 +4,21 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
   }
   root to: 'home#index'
+  resources :users, only: :show
+
   get 'trainings/index'
   get 'trainings/2input'
   get 'trainings/3reading'
   get 'trainings/4image_moji_level'
-  get 'word_image_training/tr_i_m_e1'
-  get 'word_image_training/tr_i_m_e1_ans'
-  get 'word_image_training/tr_i_m_e2'
-  get 'word_image_training/tr_i_m_e3'
-  get 'word_image_training/tr_i_m_e4'
-  get 'word_image_training/tr_i_m_e5'
-  get 'word_image_training/tr_i_m_e6'
-  get 'word_image_training/tr_i_m_e7'
-  get 'word_image_training/tr_i_m_e8'
-  get 'word_image_training/tr_i_m_e9'
-  get 'word_image_training/tr_i_m_e10'
+  get 'word_image_training/easy1'
+  get 'word_image_training/easy1_ans'
+  get 'word_image_training/easy2'
+  get 'word_image_training/easy3'
+  get 'word_image_training/easy4'
+  get 'word_image_training/easy5'
+  get 'word_image_training/easy6'
+  get 'word_image_training/easy7'
+  get 'word_image_training/easy8'
+  get 'word_image_training/easy9'
+  get 'word_image_training/easy10'
 end
