@@ -1,0 +1,24 @@
+<div class="training">
+  <div class="question">
+    <h2>当てはまるものを一つ選びましょう</h2>
+      <div class="image-question">
+        <img src="/assets/apple.png">
+        <div class="guide-question">はどれですか？</div>
+      </div>
+  </div>
+  
+  <form method="post" action="/trainings/easy1_ans" class="parent_choices">
+    <div class="choices">
+      <input type="radio" name="choice" id="select_radio1" value="鉛筆"><label for="select_radio1">鉛筆</label>
+      <input type="radio" name="choice" id="select_radio2" value="りんご"><label for="select_radio2">りんご</label>
+      <input type="radio" name="choice" id="select_radio3" value="車"><label for="select_radio3">車</label>
+      <input type="radio" name="choice" id="select_radio4" value="ズボン"><label for="select_radio4">ズボン</label>
+    </div>
+    <br>
+    <div class="answer">
+      <input type="submit" value="回答する">
+    </div>
+  </form>
+</div>
+
+  <%= render "shared/give_up_footer" %>

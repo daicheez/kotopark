@@ -1,0 +1,26 @@
+<div class="training">
+  <h1 class="question">おつかれさまでした！</h1>
+  
+  <div class="result">
+    <p>あなたの正答数は...</p>
+    <div class="result_sum">
+      /10正解！
+    </div>
+  </div>
+  
+  <div class="end">
+    <%# 8割正答の場合 %>
+    <div class="end_labor">
+      <p>よく頑張りましたね！この問題はクリアしました。</p>
+      <p>より難しい問題にチャレンジしていきましょう！</p>
+    </div>
+    <%# 8割未満の場合 %>
+    <div class="end_labor">
+      よく頑張りましたね！何度も繰り返し挑戦することで、少しずつあなたの力になっていきます！
+    </div>
+  </div>
+  
+  <div class="back_category">
+    <%= link_to "訓練選択画面へ", '#', class: :back__btn %>
+  </div>
+</div>

@@ -79,11 +79,18 @@ ul {
   width: 500px;
 }
 
+/* 新規登録ページ */
+.new-user{
+  min-height: calc(100vh - 92px);
+  background-image: url(new_user.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
 
 /* ユーザーページ */
 .my-room{
   min-height: 100vh;
-
 }
 .user-room-name-box{
   text-align: center;
@@ -136,6 +143,83 @@ ul {
 .growth-image{
   width: 30vw;
   height: 30vh;
+}
+
+/* 訓練ページ */
+.training{
+  margin: auto;
+  text-align: center;
+}
+
+.category{
+  display: flex;
+  margin: 200px;
+  justify-content: space-between;
+}
+
+.ctg__btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: blue;
+  text-decoration: none;
+  user-select: none;
+  border: 1px lightblue solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+}
+
+.image-question img{
+  height: 300px;
+  width: 300px;
+}
+
+.guide-question{
+  margin: 0 0 0 auto;
+}
+
+.choices{
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.answer{
+  
+}
+
+.choices label {
+  margin: 0 50px 0 0;
+	padding: 0 0 0 30px;	/* ラベルの位置 */
+	font-size: 30px;
+	line-height: 20px;		/* ボタンのサイズに合わせる */
+	display: inline-block;
+	cursor:	pointer;
+	position: relative;
+}
+.choices label:before {
+	content: '';
+	width: 24px;		/* ボタンの横幅 */
+	height: 24px;		/* ボタンの縦幅 */
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgb(255, 255, 255);
+  border: 1px solid;
+	border-radius: 50%;
+}
+.choices input[type="radio"] {
+	display: none;
+}
+.choices input[type="radio"]:checked + label:after {
+	content: '';
+	width: 16px;		/* マークの横幅 */
+	height: 16px;		/* マークの縦幅 */
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	background-color: rgb(4, 0, 255);
+	border-radius: 50%;
 }
 
 /* メインフッター */

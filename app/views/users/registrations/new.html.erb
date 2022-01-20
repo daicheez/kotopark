@@ -1,89 +1,92 @@
-<h2>新規登録</h2>
+<%= render "shared/header" %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "users/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <div class='form-text-wrap'>
-      <label class="form-text">メールアドレス</label>
-      <span class="indispensable">必須</span>
-    </div>
-    <%= f.email_field :email, placeholder:"PC・携帯どちらでも可", autofocus: true %>
-  </div>
-
-  <div class="field">
-    <div class='form-text-wrap'>
-      <label class="form-text">パスワード</label>
-      <span class="indispensable">必須</span>
-    </div>
-    <%= f.password_field :password, placeholder:"6文字以上の半角英数字混合" %>
-    <p class='info-text'>※英字と数字の両方を含めて設定してください</p>
-  </div>
-
-  <div class="field">
-    <div class='form-text-wrap'>
-      <label class="form-text">パスワード(確認)</label>
-      <span class="indispensable">必須</span>
-    </div>
-    <%= f.password_field :password_confirmation, placeholder:"同じパスワードを入力して下さい" %>
-  </div>
+<div class="new-user">
+  <h2>新規登録</h2>
   
-  <div class="field">
-    <div class='form-text-wrap'>
-      <label class="form-text">お名前(全角)（本名でなくても構いません）</label>
-      <span class="indispensable">必須</span>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "users/shared/error_messages", resource: resource %>
+  
+    <div class="field">
+      <div class='form-text-wrap'>
+        <label class="form-text">メールアドレス</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.email_field :email, placeholder:"PC・携帯どちらでも可", autofocus: true %>
     </div>
-    <%= f.text_area :name, placeholder: "例）こと山　パーク太朗" %>
-  </div>
-
-  <div class="field">
-    <div class='form-text-wrap'>
-      <label class="form-text">年齢（選択してください）</label>
-      <span class="indispensable">必須</span>
+  
+    <div class="field">
+      <div class='form-text-wrap'>
+        <label class="form-text">パスワード</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.password_field :password, placeholder:"6文字以上の半角英数字混合" %>
+      <p class='info-text'>※英字と数字の両方を含めて設定してください</p>
     </div>
-    <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"select-box"}) %>
-  </div>
-
-  <div class="field">
-    <div class='form-text-wrap'>
-      <label class="form-text">性別（選択してください）</label>
-      <span class="indispensable">必須</span>
+  
+    <div class="field">
+      <div class='form-text-wrap'>
+        <label class="form-text">パスワード(確認)</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.password_field :password_confirmation, placeholder:"同じパスワードを入力して下さい" %>
     </div>
-    <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"select-box"}) %>
-  </div>
-
-  <div class="field">
-    <div class='form-text-wrap'>
-      <label class="form-text">居住地域（選択してください）</label>
-      <span class="indispensable">必須</span>
+  
+    <div class="field">
+      <div class='form-text-wrap'>
+        <label class="form-text">お名前(全角)（本名でなくても構いません）</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :name, placeholder: "例）こと山　パーク太朗" %>
     </div>
-    <%= f.collection_select(:place_id, Place.all, :id, :name, {}, {class:"select-box"}) %>
-  </div>
-
-  <div class="field">
-    <div class='form-text-wrap'>
-      <label class="form-text">趣味</label>
-      <span class="indispensable">任意</span>
+  
+    <div class="field">
+      <div class='form-text-wrap'>
+        <label class="form-text">年齢（選択してください）</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"select-box"}) %>
     </div>
-    <%= f.text_area :hobby, placeholder: "例）家庭菜園" %>
-  </div>
-
-  <div class="field">
-    <div class='form-text-wrap'>
-      <label class="form-text">職業</label>
-      <span class="indispensable">任意</span>
+  
+    <div class="field">
+      <div class='form-text-wrap'>
+        <label class="form-text">性別（選択してください）</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"select-box"}) %>
     </div>
-    <%= f.text_area :job, placeholder: "例）元事務員" %>
-  </div>
-
-  <div class="field">
-    <div class='form-text-wrap'>
-      <label class="form-text">ひとこと</label>
-      <span class="indispensable">任意</span>
+  
+    <div class="field">
+      <div class='form-text-wrap'>
+        <label class="form-text">居住地域（選択してください）</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.collection_select(:place_id, Place.all, :id, :name, {}, {class:"select-box"}) %>
     </div>
-    <%= f.text_area :profile, placeholder: "例）買い物行けるようになりたいです！",maxlength:"200" %>
-  </div>
-
+  
+    <div class="field">
+      <div class='form-text-wrap'>
+        <label class="form-text">趣味</label>
+        <span class="indispensable">任意</span>
+      </div>
+      <%= f.text_area :hobby, placeholder: "例）家庭菜園" %>
+    </div>
+  
+    <div class="field">
+      <div class='form-text-wrap'>
+        <label class="form-text">職業</label>
+        <span class="indispensable">任意</span>
+      </div>
+      <%= f.text_area :job, placeholder: "例）元事務員" %>
+    </div>
+  
+    <div class="field">
+      <div class='form-text-wrap'>
+        <label class="form-text">ひとこと</label>
+        <span class="indispensable">任意</span>
+      </div>
+      <%= f.text_area :profile, placeholder: "例）買い物行けるようになりたいです！",maxlength:"200" %>
+    </div>
+    <br>
     <div class="field">
       <div class='form-text-wrap'>
       <label class="form-text">イメージ画像</label>
@@ -91,10 +94,11 @@
       </div>
       <%= f.file_field :avatar, class: 'hidden' %>
     </div>
-
-  <div class="actions">
-    <%= f.submit "新規登録" %>
-  </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+  <br>
+    <div class="actions">
+      <%= f.submit "新規登録" %>
+    </div>
+  <% end %>
+  <br>
+  <%= render "users/shared/links" %>
+</div>

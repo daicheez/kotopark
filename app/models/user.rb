@@ -14,6 +14,7 @@ class User < ApplicationRecord
   validates :profile, length: { maximum: 200 } 
 
   has_one_attached :avatar
+  has_many :trainings
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :age

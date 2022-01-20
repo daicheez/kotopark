@@ -1,0 +1,17 @@
+<div class="question">
+  <h2>当てはまるものを一つ選びましょう</h2>
+  <%= img src="/images/fish.png" %><h1>はどれですか？</h1>
+</div>
+
+<form method="post" action="" class="level">
+  <input type="radio" name="choice" value="ピラミッド">ピラミッド
+  <input type="radio" name="choice" value="魚">魚
+  <input type="radio" name="choice" value="カラス">カラス
+  <input type="radio" name="choice" value="石">石
+
+<p><input type="submit" value="回答する"></p>
+
+</form>
+<div class="break">
+  <%= link_to "止める", trainings_index_path, class: :back__btn %>
+</div>

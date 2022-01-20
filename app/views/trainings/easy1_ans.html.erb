@@ -1,0 +1,20 @@
+<div class="training">
+  <div class="card">
+    <div class="question">
+      <%= img src="/assets/apple.png" %><h1></h1>
+    </div>
+  
+    <div class="answer">
+      <h1>りんご</h1>
+    </div>
+  </div>
+  
+  <div class="next">
+    <%= link_to "次の問題", "/", class: :nxt__btn %>
+  </div>
+  
+  <br>
+  <div class="break">
+    <%= link_to "止める", trainings_index_path, class: :back__btn %>
+  </div>
+</div>

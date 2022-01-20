@@ -1,12 +1,16 @@
-<h2 class="guidance">カテゴリーを選んで下さい</h2>
+<%= render "shared/header" %>
 
-<div class="category">
-  <%= link_to "聴く", '#', class: :ctg__btn %>
+<div class="training">
+  <h2 class="guidance">カテゴリーを選んで下さい</h2>
+  
+  <div class="category">
+    <%= link_to "聴く", '#', class: :ctg__btn %>
+    <br>
+    <%= link_to "読む", trainings_3reading_path, class: :ctg__btn %>
+  </div>
+  
   <br>
-  <%= link_to "読む", trainings_3reading_path, class: :ctg__btn %>
-</div>
-
-<br>
-<div class="back_category">
-  <%= link_to "一つ戻る", trainings_index_path, class: :back__btn %>
+  <div class="back_category">
+    <%= link_to "一つ戻る", trainings_index_path, class: :back__btn %>
+  </div>
 </div>
