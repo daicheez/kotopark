@@ -42,12 +42,12 @@
   
     <%# ユーザーの進捗状況の表示 %>
     <div class="user-growth-content">
-      <% if @user.experience_point >= 1 %>
-        <img src="/assets/growth_plant_2.png" alt="" class="growth-image">
+      <% if @user.experience_point >= 10 %>
+        <img src="/assets/growth_plant_5.png" alt="" class="growth-image5">
       <% elsif @user.experience_point >= 8 %>
-        <img src="/assets/growth_plant_3.png" alt="" class="growth-image">
-      <% elsif @user.experience_point >= 10 %>
         <img src="/assets/growth_plant_4.png" alt="" class="growth-image">
+      <% elsif @user.experience_point >= 1 %>
+        <img src="/assets/growth_plant_3.png" alt="" class="growth-image">
       <% else %>
         <img src="/assets/growth_plant_1.png" alt="" class="growth-image">
       <% end %>
