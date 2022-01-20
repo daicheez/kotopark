@@ -3,16 +3,23 @@
 | アプリケーション名             | ことパーク                                                                 |
 | アプリケーション概要           | 言葉を再獲得するための練習ができます。主に失語症の方向けです。             |
 | URL                            | https://kotopark.herokuapp.com/                                            |
-| テスト用アカウント             | ログイン機能等を実装した場合は、ログインに必要な情報を記述。またBasic認証等を設けている場合は、そのID/Passも記述すること |
+| テスト用アカウント             | Basic認証 ID:admin 
+          Pass:0987
+メールアドレス: 1@com
+パスワード: a00000 |
 | 利用方法                       | このアプリケーションの利用方法を記述。説明が長い場合は、箇条書きでリスト化すること。 |
 | アプリケーションを作成した背景 | 自宅でも簡単に楽しく言葉のリハビリを継続できるアプリケーションを作りました。失語症の方が退院後に継続して言葉のリハビリを続けられる方は少ない現状があります。リハビリは発症後最大６ヶ月間入院しリハビリできますが、退院後はリハビリの時間が極端に減少してしまいます。しかし失語症は発症後1年~3年ほどはリハビリの効果が期待されます。そこで楽しく言葉のリハビリが継続できるようこのアプリケーションを開発しました。 |
-| 洗い出した要件                 | 要件定義をまとめたスプレッドシートのリンクを記述。  |
+| 洗い出した要件                 | https://docs.google.com/spreadsheets/d/1L3ZqyrBGRjLzt1EtFq7l8OO7sPdJ05yOhXTGno8w9sg/edit?usp=sharing |
 | 実装した機能についての説明     | 実装した機能について、それぞれどのような特徴があるのかを列挙する形で記述。画像はGyazoで、GIFはGyazoGIFで撮影すること。  |
-| 実装予定の機能                 | 洗い出した要件の中から、今後実装予定の機能がある場合は、その機能を記述。    |
-| データベース設計               | ER図を添付。 |
-| 画面遷移図                     | 画面遷移図を添付。 |
-| 開発環境                       | 使用した言語・サービスを記述。|
+| 実装予定の機能                 | ・友達機能
+・コメント機能
+・ランダムユーザー表示機能
+・訓練のレコメンド機能 |
+| データベース設計               | [![Image from Gyazo](https://i.gyazo.com/2d6fd0c02590ead8e2516e5b2630cfc3.png)](https://gyazo.com/2d6fd0c02590ead8e2516e5b2630cfc3) |
+| 画面遷移図                     | [![Image from Gyazo](https://i.gyazo.com/7fb6719eb604e36b3ccde9ea84994193.png)](https://gyazo.com/7fb6719eb604e36b3ccde9ea84994193) |
+| 開発環境                       | Ruby,Ruby on Rails,HTML/CSS,MySQL,Github,AWS,Visual Studio Code |
 | ローカルでの動作方法           | git cloneしてから、ローカルで動作をさせるまでに必要なコマンドを記述。 |
+
 
 # テーブル設計
 
@@ -42,27 +49,41 @@
 
 ## trainings テーブル
 
-| Column | Type       | Options                        |
-| ------ | ---------- | ------------------------------ |
-| user   | references | null: false, foreign_key: true |
-| score  | integer    | null: false                    |
+| Column     | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| user       | references | null: false, foreign_key: true |
+| level      | text       | null: false                    |
+| score      | integer    | null: false                    |
 
 ### Association
 
 - belongs_to :user
-- has_many :choices
+- has_many :questions
 
-## choices テーブル
+## questions テーブル
 
-| Column    | Type       | Options                        |
-| --------- | ---------- | ------------------------------ |
-| trainings | references | null: false, foreign_key: true |
-| question  | text       | null: false                    |
-| answer    | boolean    | null: false                    |
+| Column     | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| training   | references | null: false, foreign_key: true |
+| content    | text       | null: false                    |
+| point      | integer    | null: false                    |
 
 ### Association
 
 - belongs_to :training
+- has_many :choices
+
+## choices テーブル
+
+| Column   | Type       | Options                        |
+| -------- | ---------- | ------------------------------ |
+| question | references | null: false, foreign_key: true |
+| chose    | text       | null: false                    |
+| answer   | boolean    | null: false                    |
+
+### Association
+
+- belongs_to :question
 
 ## comments テーブル
 
