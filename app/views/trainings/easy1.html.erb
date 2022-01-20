@@ -1,0 +1,21 @@
+<div class="training">
+  <div class="question">
+    <h2>当てはまるものを一つ選びましょう</h2>
+    <h1><img src="/assets/apple.png">はどれですか？</h1>
+  </div>
+  
+  <form method="post" action="/tr_i_m_e1_ans" class="parent_choices">
+    <div class="choices">
+      <h1><input type="radio" name="choice" value="鉛筆">鉛筆</h1>
+      <h1><input type="radio" name="choice" value="りんご">りんご</h1>
+      <h1><input type="radio" name="choice" value="車">車</h1>
+      <h1><input type="radio" name="choice" value="ズボン">ズボン</h1>
+    </div>
+  <br>
+    <div class="answer">
+      <input type="submit" value="回答する">
+    </div>
+  </form>
+</div>
+
+  <%= render "shared/give_up_footer" %>
