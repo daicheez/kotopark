@@ -3,7 +3,7 @@
 | アプリケーション名             | ことパーク                                                                 |
 | アプリケーション概要           | 言葉を再獲得するためのリハビリができます。主に失語症の方向けです。         |
 | URL                            | https://kotopark.herokuapp.com/                                            |
-| テスト用アカウント             | Basic認証<br> ID:admin<br> Pass:0987<br>メールアドレス: 1@com<br>パスワード: a00000 |
+| テスト用アカウント             | Basic認証<br> ID: admin<br> Pass: 0987<br>メールアドレス: 1@com<br>パスワード: a00000 |
 | 利用方法                       | このアプリケーションの利用方法を記述。説明が長い場合は、箇条書きでリスト化すること。 |
 | アプリケーションを作成した背景 | 自宅でも簡単に楽しく言葉のリハビリを継続できるアプリケーションを作りました。<br>失語症の方が退院後に継続して言葉のリハビリを続けられる方は少ない現状があります。リハビリは発症後最大６ヶ月間入院しリハビリできますが、退院後はリハビリの時間が極端に減少してしまいます。しかし失語症は発症後1年~3年ほどはリハビリの効果が期待されます。<br>そこで楽しく言葉のリハビリが継続できるようこのアプリケーションを開発しました。 |
 | 洗い出した要件                 | https://docs.google.com/spreadsheets/d/1L3ZqyrBGRjLzt1EtFq7l8OO7sPdJ05yOhXTGno8w9sg/edit?usp=sharing |
@@ -15,6 +15,7 @@
 | ローカルでの動作方法           | 以下、コマンドを実行して下さい。<br>% git clone https://github.com/daicheez/kotopark.git  <br>% cd ユーザー名/kotopark  <br>% bundle install  <br>% yarn install |
 
 
+<br>
 # テーブル設計
 
 ## users テーブル
