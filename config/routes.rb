@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'choices/create'
   get 'word_image_trainings/index'
   devise_for :users, controllers: {
     registrations: 'users/registrations',
@@ -6,6 +7,7 @@ Rails.application.routes.draw do
   }
   root to: 'home#index'
   resources :users, only: :show
+  resources :choices, only: :create
 
   get 'trainings/index'
   get 'trainings/2input'
