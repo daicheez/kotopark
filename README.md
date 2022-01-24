@@ -10,7 +10,7 @@
 | 実装した機能についての説明     | ・新規登録機能<br>[![Image from Gyazo](https://i.gyazo.com/6d404b45ee27749c93d108a0533580e5.gif)](https://gyazo.com/6d404b45ee27749c93d108a0533580e5)<br>・ログイン機能  [![Image from Gyazo](https://i.gyazo.com/a7ad0750ca939d6783531e343037c1e4.gif)](https://gyazo.com/a7ad0750ca939d6783531e343037c1e4)<br>・訓練機能（訓練機能は最後まで実装できていません）<br>[![Image from Gyazo](https://i.gyazo.com/d3e2702d2cbfac78c06793b7c1ac8b91.gif)](https://gyazo.com/d3e2702d2cbfac78c06793b7c1ac8b91)<br>訓練進捗機能(問題に正答するごとに植物が成長します)<br>[![Image from Gyazo](https://i.gyazo.com/6d3f6dffb58db8afd26c5ae25cba8f55.gif)](https://gyazo.com/6d3f6dffb58db8afd26c5ae25cba8f55) |
 | 実装予定の機能                 | 今後は訓練機能を10問最後まで実施できるようにします。その後は訓練の問題数を充実させながら、・友達機能・コメント機能・ランダムユーザー表示機能・訓練のレコメンド機能を実装していきます。 |
 | データベース設計               | [![Image from Gyazo](https://i.gyazo.com/bcb689b36b36b8848a882a5da7088e40.png)](https://gyazo.com/bcb689b36b36b8848a882a5da7088e40) |
-| 画面遷移図                     | [![Image from Gyazo](https://i.gyazo.com/7fb6719eb604e36b3ccde9ea84994193.png)](https://gyazo.com/7fb6719eb604e36b3ccde9ea84994193) |
+| 画面遷移図                     | [![Image from Gyazo](https://i.gyazo.com/6c4c2ed9e5fe2b41e978a21f9190771c.png)](https://gyazo.com/6c4c2ed9e5fe2b41e978a21f9190771c) |
 | 開発環境                       | Ruby,Ruby on Rails,HTML/CSS,Github,Visual Studio Code,Sequel pro |
 | ローカルでの動作方法           | 以下、コマンドを実行して下さい。<br>% git clone https://github.com/daicheez/kotopark.git  <br>% cd ユーザー名/kotopark  <br>% bundle install  <br>% yarn install |
 
