@@ -3,6 +3,7 @@ class TrainingsController < ApplicationController
   end
 
   def create
-    Training.new(params[:category, :sub_category, :level])
+    Training.new(params[:training_at])
   end
+
 end
