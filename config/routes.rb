@@ -5,11 +5,11 @@ Rails.application.routes.draw do
   }
   root to: 'home#index'
   resources :users, only: :show
+  resources :trainings, only: [:index, :create]
 
   get 'trainings/index'
   get 'trainings/2reading'
   get 'trainings/3image_word_level'
-  get 'questions/easy1'
-  get 'choices/easy1_ans'
+  get 'trainings/easy1'
 
 end
