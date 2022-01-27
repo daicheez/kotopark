@@ -54,16 +54,16 @@ window.addEventListener('DOMContentLoaded', function() {
     "3. ねずみ",
     "4. 時計",
     "2"],
-    ["/assets/apple.png",
-    "1. ズボン",
-    "2. りんご",
-    "3. 時計",
-    "4. 電話",
-    "2"],
+    ["/assets/glasses.png",
+    "1. 眼鏡",
+    "2. 電話",
+    "3. 消しゴム",
+    "4. 太陽",
+    "1"],
   ];
   // 問題を表示するオブジェクトを取得する
   let Q = document.getElementById('_question');
-  // 問題を表示するオブジェクトを取得する
+  // 回答を表示するオブジェクトを取得する
   let A1 = document.getElementById('_ans1');
   let A2 = document.getElementById('_ans2');
   let A3 = document.getElementById('_ans3');
