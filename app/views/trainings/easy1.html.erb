@@ -1,24 +1,20 @@
 <div class="training">
   <div class="question">
     <h2>当てはまるものを一つ選びましょう</h2>
-      <div class="image-question">
-        <img src="/assets/apple.png">
-        <div class="guide-question">はどれですか？</div>
-      </div>
+    <div class="image-question">
+      <img src="/assets/hyoujityu.png" id="_question"><h2>はどれ？</h2>
+    </div>
+    <ul>
+      <li id="_ans1">回答1</li>
+      <li id="_ans2">回答2</li>
+      <li id="_ans3">回答3</li>
+      <li id="_ans4">回答4</li>
+    </ul>
+    <button type="button" id="_answer_1" onclick="answerCheck(1)">回答1</button>
+    <button type="button" id="_answer_2" onclick="answerCheck(2)">回答2</button>
+    <button type="button" id="_answer_3" onclick="answerCheck(3)">回答3</button>
+    <button type="button" id="_answer_4" onclick="answerCheck(4)">回答4</button>
   </div>
-  
-  <form method="post" action="/choices/easy1_ans" class="parent_choices">
-    <div class="choices">
-      <input type="radio" name="choice" id="select_radio1" value=false><label for="select_radio1">鉛筆</label>
-      <input type="radio" name="choice" id="select_radio2" value=true><label for="select_radio2">りんご</label>
-      <input type="radio" name="choice" id="select_radio3" value=false><label for="select_radio3">車</label>
-      <input type="radio" name="choice" id="select_radio4" value=false><label for="select_radio4">ズボン</label>
-    </div>
-    <br>
-    <div class="answer">
-      <input type="submit" value="回答する">
-    </div>
-  </form>
 </div>
 
   <%= render "shared/give_up_footer" %>

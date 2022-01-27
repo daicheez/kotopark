@@ -197,9 +197,9 @@ ul {
 
 .choices label {
   margin: 0 50px 0 0;
-	padding: 0 0 0 30px;	/* ラベルの位置 */
+	padding: 0 0 0 30px; /* ラベルの位置 */
 	font-size: 30px;
-	line-height: 20px;		/* ボタンのサイズに合わせる */
+	line-height: 20px; /* ボタンのサイズに合わせる */
 	display: inline-block;
 	cursor:	pointer;
 	position: relative;
