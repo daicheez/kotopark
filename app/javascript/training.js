@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', function() {
+const QuestionSet = () => {
   let Question = [
     ["/assets/apple.png",
     "1. ズボン",
@@ -53,7 +53,7 @@ window.addEventListener('DOMContentLoaded', function() {
     "2. お茶",
     "3. ねずみ",
     "4. 時計",
-    "2"],
+    "4"],
     ["/assets/glasses.png",
     "1. 眼鏡",
     "2. 電話",
@@ -74,13 +74,12 @@ window.addEventListener('DOMContentLoaded', function() {
   let Qcnt = 0;
   // 問題を画面に表示する処理
   function Q_Set() {
-    Q.innerHTML = _question.setAttribute('src',Question[Qcnt][0]);
+    Q.setAttribute('src',Question[Qcnt][0]);
     A1.textContent = Question[Qcnt][1];
     A2.textContent = Question[Qcnt][2];
     A3.textContent = Question[Qcnt][3];
     A4.textContent = Question[Qcnt][4];
   };
-  // 画面に表示
   Q_Set();
   // 回答ボタンを押したときの処理
   function answerCheck(ans) {
@@ -92,15 +91,24 @@ window.addEventListener('DOMContentLoaded', function() {
     }
     Qcnt++;
     if (Qcnt == Question.length) {
-      Q.innerHTML = `お疲れ様でした！10問中、正解数は${Correct}でした。`;
+      let E = document.getElementById('_end')
+      Q.remove()
+      E.innerHTML = `お疲れ様でした！10問中、正解数は${Correct}でした。`;
       A1.textContent = "";
       A2.textContent = "";
       A3.textContent = "";
       A4.textContent = "";
+      document.getElementById("_answer_1").remove()
+      document.getElementById("_answer_2").remove()
+      document.getElementById("_answer_3").remove()
+      document.getElementById("_answer_4").remove()
+      document.getElementById("title").remove()
     } else {
       // 画面に表示
       Q_Set();
     }
   }
   window.answerCheck = answerCheck;
-});
+};
+
+window.addEventListener('DOMContentLoaded', QuestionSet);
