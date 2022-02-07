@@ -5,16 +5,13 @@
       <%# JavaScriptにて問題を表示 %>
       <img src="/assets/reload.png" id="_question"><h2 id="_end">はどれ？</h2>
     </div>
-    <ul>
-      <li id="_ans1">回答1</li>
-      <li id="_ans2">回答2</li>
-      <li id="_ans3">回答3</li>
-      <li id="_ans4">回答4</li>
-    </ul>
-    <button type="button" id="_answer_1" onclick="answerCheck(1)">回答1</button>
-    <button type="button" id="_answer_2" onclick="answerCheck(2)">回答2</button>
-    <button type="button" id="_answer_3" onclick="answerCheck(3)">回答3</button>
-    <button type="button" id="_answer_4" onclick="answerCheck(4)">回答4</button>
+    <div>
+      <%# JavaScriptにて選択肢を表示 %>
+          <button type="button" id="_answer_1" onclick="answerCheck(1)">回答1</button>
+          <button type="button" id="_answer_2" onclick="answerCheck(2)">回答2</button>
+          <button type="button" id="_answer_3" onclick="answerCheck(3)">回答3</button>
+          <button type="button" id="_answer_4" onclick="answerCheck(4)">回答4</button>
+    </div>
   </div>
 </div>
 
