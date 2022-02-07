@@ -5,9 +5,15 @@
   
   <div class="level">
     <div class="category">
-      <%= link_to "単語\n選択肢4つ", trainings_easy1_path, class: :ctg__btn %>
-      <%= link_to "単語\n選択肢9つ", '#', class: :ctg__btn %>
-      <%= link_to "短文\n選択肢4つ", '#', class: :ctg__btn %>
+      <%= link_to trainings_easy1_path, class: :ctg__btn do %>
+      単語<br>選択肢4つ
+      <% end %>
+      <%= link_to '#', class: :ctg__btn do %>
+      単語<br>選択肢9つ
+      <% end %>
+      <%= link_to '#', class: :ctg__btn do %>
+      短文<br>選択肢4つ
+      <% end %>
     </div>
   </div>
   
