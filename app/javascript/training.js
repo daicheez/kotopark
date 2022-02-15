@@ -61,13 +61,17 @@ const QuestionSet = () => {
     "太陽",
     "1"],
   ];
-  // 問題を表示するオブジェクトを取得する
+  // 問題を表示するオブジェクトを取得
   let Q = document.getElementById('_question');
-  // 回答を表示するオブジェクトを取得する
+  // 回答を表示するオブジェクトを取得
   let A1 = document.getElementById('_answer_1');
   let A2 = document.getElementById('_answer_2');
   let A3 = document.getElementById('_answer_3');
   let A4 = document.getElementById('_answer_4');
+  // 正答数を表示させるオブジェクトの取得
+  let T = document.getElementById('title');
+  // 終了ボタンを表示するオブジェクトの取得
+  let SD = document.getElementById('_send_data');
   // 正解数を保持する値
   let Correct = 0;
   // 現在の問題数
@@ -79,32 +83,31 @@ const QuestionSet = () => {
     A2.textContent = Question[Qcnt][2];
     A3.textContent = Question[Qcnt][3];
     A4.textContent = Question[Qcnt][4];
+    SD.remove()
   };
   Q_Set();
   // 回答ボタンを押したときの処理
   function answerCheck(ans) {
     if(ans == Question[Qcnt][5]) {
-      alert("正解");
+      alert("正解！");
       Correct++;
     } else {
       alert("不正解");
     }
     Qcnt++;
     if (Qcnt == Question.length) {
-      let E = document.getElementById('_end')
+      T.innerHTML = `お疲れ様でした！10問中、正解数は${Correct}でした。`;
+      // 正答数やどの問題を行ったのかを記録するためのフォームを送信するボタンの表示
+      
       Q.remove()
-      E.innerHTML = `お疲れ様でした！10問中、正解数は${Correct}でした。`;
-      A1.textContent = "";
-      A2.textContent = "";
-      A3.textContent = "";
-      A4.textContent = "";
-      document.getElementById("_answer_1").remove()
-      document.getElementById("_answer_2").remove()
-      document.getElementById("_answer_3").remove()
-      document.getElementById("_answer_4").remove()
-      document.getElementById("title").remove()
+      A1.remove()
+      A2.remove()
+      A3.remove()
+      A4.remove()
+      document.getElementById("_which").remove()
+      document.getElementById("_give_up").remove()
     } else {
-      // 画面に表示
+      // 10問達していなければ問題を再表示
       Q_Set();
     }
   }
